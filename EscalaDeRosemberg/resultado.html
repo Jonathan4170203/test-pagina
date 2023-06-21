@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultado de la autoestima</title>
+</head>
+<body>
+  <h1>Resultado de la autoestima</h1>
+
+  <script>
+    // Obtiene los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const puntos = urlParams.get('puntos');
+    const resultado = decodeURIComponent(urlParams.get('resultado'));
+
+    // Muestra los valores en la página
+    document.write("<h2>Tu puntuación es " + puntos + "</h2>");
+    document.write("<h2>" + resultado +"<h2>");
+    
+    function goToIndex() {
+      window.location.href = "../index.php";
+    }
+    function goToTest() {
+      window.location.href = "./test.html";
+    }
+  </script>
+  <br>
+  <button onclick="goToIndex()">Ir al inicio</button>
+  <button onclick="goToTest()">Enviar otra respuesta</button>
+</body>
+</html>
